@@ -1,0 +1,37 @@
+<div class="container">
+    
+    <h1>Developers in your location</h1>
+    <p class="lead">Get in touch with developers near you!</p>
+    <form>
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" name="searchform" [(ngModel)]="location" (enter)="search(location);" class="form-control" placeholder="search developers by place...">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" (click)="search(location);">Search</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <div *ngIf="users">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Developers from: {{location}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="user col-md-3 text-center" *ngFor="let user of users">
+                            <div class="row">
+                                <div class="col-md-2">
+                                        <div class="img_container">
+                                            <img src="{{user.avatar_url}}"  width="200" height="200">
+                                            <a class="btn btn-primary" routerLink="/details/{{user.login}}">View Details</a>
+                                        </div>
+                                </div>   
+                                 
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+</div>

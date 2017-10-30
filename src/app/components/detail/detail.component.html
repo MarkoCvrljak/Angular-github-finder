@@ -1,0 +1,33 @@
+<div class="container">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{detail.name}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="profile-img img-thumbnail" src="{{detail.avatar_url}}">
+                <a class="btn btn-default btn-block" href="{{detail.html_url}}" target="_blank">View Profile</a>
+            </div>   
+            <div class="col-md-8">
+                <div class="stats">
+                    <span class="label label-primary">{{detail.public_repos}} Public Repos</span>
+                    <span class="label label-success">{{detail.public_gists}} Public Gists</span>
+                    <span class="label label-info">{{detail.followers}} Followers</span>
+                    <span class="label label-warning">{{detail.following}} Following</span>
+                </div>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Username: </strong>{{detail.login}}</li> 
+                    <li class="list-group-item"><strong>Location: </strong>{{detail.location}}</li>
+                    <li class="list-group-item"><strong>Email: </strong>{{detail.email}}</li>
+                    <li class="list-group-item"><strong>Blog: </strong>{{detail.blog}}</li>
+                    <li class="list-group-item"><strong>Member Since: </strong>{{detail.created_at}}</li>   
+                    <a class="btn btn-primary" routerLink="/repos/{{detail.login}}">View This Users Repos</a>
+                    
+                </ul>
+            </div>   
+        </div>
+    </div>
+</div>
+</div>
